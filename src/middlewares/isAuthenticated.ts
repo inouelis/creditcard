@@ -29,6 +29,6 @@ export function isAuthenticated(
 
     return next();
   } catch (err) {
-    return res.status(401).end();
+    throw new Error("Compra não autorizada!");
   }
 }
